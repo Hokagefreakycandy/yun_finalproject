@@ -1,0 +1,46 @@
+h1{
+    font-size:56px;
+    font-family:Inter;
+}
+
+div.nav {
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+    width: 100%;
+    /*100%= 100% of parent(sidebar) */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+#nav1{
+    background-color: red;
+}
+#nav2{
+    background-color: #E19A67;
+}
+#nav3{
+    background-color: black;
+    color: aliceblue;
+}
+
+.sidebar{
+    padding: 0%;
+    width: 78px;
+    flex-basis: 78px;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-2 b{
+    color: rgb(62, 51, 191);
+}
+
+.col{
+    border-bottom:1px solid black;
+}
