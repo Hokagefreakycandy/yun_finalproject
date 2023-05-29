@@ -41,6 +41,13 @@ div.nav {
     color: rgb(62, 51, 191);
 }
 
-.col{
+.navborder{
     border-bottom:1px solid black;
+}
+
+#loginform{
+    
+    margin: 6rem auto;
+    width: 50%;
+    
 }
