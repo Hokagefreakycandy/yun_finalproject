@@ -49,5 +49,20 @@ div.nav {
     
     margin: 6rem auto;
     width: 50%;
-    
+
+}
+
+.animals-gallery {
+
+}
+/*33.3% becuase 3 images per row*/
+.animals-gallery img {
+    width: 33.3%;
+}
+
+/*14.2% because its desktop*/
+@media (min-width: 768px) {
+.animals-gallery img {
+    width: 14.2%;
+}
 }
