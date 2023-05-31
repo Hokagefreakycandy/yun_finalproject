@@ -52,6 +52,11 @@ div.nav {
 
 }
 
+#loginform.name_error,
+#loginform. password_error{
+    
+}
+
 .animals-gallery {
 
 }

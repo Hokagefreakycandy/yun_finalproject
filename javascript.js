@@ -55,14 +55,20 @@ const imagesOfCats = [
  shuffletry(imagesOfCats);
  console.log(imagesOfCats); 
 
- /*Show all the pictures on the container*/
- for (let i=0; i < imagesOfCats.length; i++) {
-; const pic = `<img src="images/cats/${imagesOfCats[i]}" />` 
-    console.log(pic);
+ if (storing){ 
 
-    storing.innerHTML = pic + (storing.innerHTML)
+     /*Show all the pictures on the container*/
+ for (let i=0; i < imagesOfCats.length; i++) {
+    ; const pic = `<img src="images/cats/${imagesOfCats[i]}" />` 
+        console.log(pic);
+    
+        storing.innerHTML = pic + (storing.innerHTML)
+    
+     }
+    
 
  }
+
 
 
 
@@ -72,7 +78,8 @@ const imagesOfCats = [
   shuffletry(imagesOfDogs);
   console.log(imagesOfDogs); 
  
-  /*Show all the pictures on the container*/
+  if (storingdog){
+     /*Show all the pictures on the container*/
   for (let i=0; i < imagesOfDogs.length; i++) {
  ; const pic = `<img src="images/dogs/${imagesOfDogs[i]}" />` 
      console.log(pic);
@@ -80,3 +87,26 @@ const imagesOfCats = [
      storingdog.innerHTML = pic + (storingdog.innerHTML)
  
   }
+  }
+ 
+
+
+  //Validation Code for Inputs
+
+  var username = document.forms['loginform']['username'];
+  var password = document.forms['loginform']['password'];
+
+  var name_error = document.getElementById('name_error')
+  var password_error = document.getElementById('password_error')
+
+  function validated(){
+    if (username.value.length < 1) {
+        username.style.border = "1px solid red";
+        name_error.style.display = "block";
+        username.focus();
+        return false;
+    }
+
+  }
+
+  document.getElementById("loginform").addEventListener("submit",validated)
