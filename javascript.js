@@ -95,7 +95,7 @@ const imagesOfCats = [
 
   var username = document.forms['loginform']['username'];
   var password = document.forms['loginform']['password'];
-  var selfintro = document.forms['loginform']['text'];
+  var selfintro = document.forms['loginform']['introtext'];
 
   var name_error = document.getElementById('name_error')
   var password_error = document.getElementById('password_error')
@@ -118,9 +118,9 @@ const imagesOfCats = [
     }
 
     if (selfintro.value.length < 1) {
-        text.style.border = "1px solid red";
+        selfintro.style.border = "1px solid red";
         intro_error.style.display = "block";
-        text.focus(); 
+        selfintro.focus(); 
         event.preventDefault()
         return false;
     }
