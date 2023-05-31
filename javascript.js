@@ -95,18 +95,35 @@ const imagesOfCats = [
 
   var username = document.forms['loginform']['username'];
   var password = document.forms['loginform']['password'];
+  var selfintro = document.forms['loginform']['text'];
 
   var name_error = document.getElementById('name_error')
   var password_error = document.getElementById('password_error')
+  var intro_error = document.getElementById('intro_error')
 
-  function validated(){
+
+  function validated(event){ 
     if (username.value.length < 1) {
         username.style.border = "1px solid red";
         name_error.style.display = "block";
-        username.focus();
+        username.focus(); 
+        event.preventDefault()
+    }
+
+    if (password.value.length < 1) {
+        password.style.border = "1px solid red";
+        password_error.style.display = "block";
+        password.focus(); 
+        event.preventDefault()
+    }
+
+    if (selfintro.value.length < 1) {
+        text.style.border = "1px solid red";
+        intro_error.style.display = "block";
+        text.focus(); 
+        event.preventDefault()
         return false;
     }
 
   }
-
   document.getElementById("loginform").addEventListener("submit",validated)
